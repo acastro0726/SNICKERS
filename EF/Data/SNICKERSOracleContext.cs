@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Emit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using SNICKERS.EF.Models;
@@ -32,7 +33,7 @@ namespace SNICKERS.EF.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("PS5")
+            modelBuilder.HasDefaultSchema("UD_ACASTRO")
                 .UseCollation("USING_NLS_COMP");
 
             modelBuilder.Entity<Course>(entity =>
